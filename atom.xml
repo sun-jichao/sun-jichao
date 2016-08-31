@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孙继超的网络日志</title>
+  <subtitle>苦逼程序员一枚</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://sunjichao.com/"/>
+  <updated>2016-08-31T13:10:38.826Z</updated>
+  <id>http://sunjichao.com/</id>
+  
+  <author>
+    <name>孙继超</name>
+    <email>sunjichao.cn@outlook.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sublime Text 3 用户设置</title>
+    <link href="http://sunjichao.com/201608/sublime-text-3-user-settings/"/>
+    <id>http://sunjichao.com/201608/sublime-text-3-user-settings/</id>
+    <published>2016-08-30T18:33:41.000Z</published>
+    <updated>2016-08-31T13:10:38.826Z</updated>
+    
+    <content type="html"><![CDATA[<p>针对中日文双系统、使用范围不同，分别配置 <code>Sublime Text 3</code> 的用户设定。<br><a id="more"></a></p>
+<h1 id="用户设定（中文系统）"><a href="#用户设定（中文系统）" class="headerlink" title="用户设定（中文系统）"></a>用户设定（中文系统）</h1><blockquote>
+<p>主要用于文档的编写，和少量的代码开发<br>设定中包含部分系统默认值，重复设定，只是为了添加中文说明，<br>方便以后变更，毕竟默认设定选项太多，而且说明还是英文的。</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    // 设置光标闪动方式</div><div class="line">    "caret_style": "phase",</div><div class="line">    // 主题文件的路径</div><div class="line">    "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",</div><div class="line">    // 如果没有定义过，则文件居中显示（比如新建的文件）</div><div class="line">    "draw_centered": false,</div><div class="line">    // 按space或tab时，实际会产生白色的点（一个空格一个点）或白色的横线（tab_size设置的制表符的宽度）</div><div class="line">    // 要在选中状态下才能看到</div><div class="line">    // 设置为none时，什么情况下都不显示这些点和线</div><div class="line">    // 设置为selection时，只显示选中状态下的点和线</div><div class="line">    // 设置为all时，则一直显示</div><div class="line">    "draw_white_space": "all",</div><div class="line">    // 为true时，保存文件时光标会在文件的最后向下换一行</div><div class="line">    "ensure_newline_at_eof_on_save": true,</div><div class="line">    // 设置字体和大小，必须在Settings-User里重写，这里设置没有任何效果</div><div class="line">    // 之前使用的是雅黑Consolas混合编程字体，但是在代码中不能显示斜体，</div><div class="line">    // 在尝试设定FontLink无法达到满意效果后，果断放弃。</div><div class="line">    "font_face": "Consolas",</div><div class="line">    "font_size": 12,</div><div class="line">    // 是否显示行号边栏</div><div class="line">    "gutter": true,</div><div class="line">    // 突出显示当前光标所在的行</div><div class="line">    "highlight_line": true,</div><div class="line">    // 设置文件修改时, 标签高亮提示, 这样可以提示保存</div><div class="line">    "highlight_modified_tabs": true,</div><div class="line">    // 是否显示行号</div><div class="line">    "line_numbers": true,</div><div class="line">    // 设置每一行到底部，以像素为单位的间距，效果相当于行距</div><div class="line">    "line_padding_bottom": 1,</div><div class="line">    // 设置每一行到顶部，以像素为单位的间距，效果相当于行距</div><div class="line">    "line_padding_top": 1,</div><div class="line">    // 删除你想要忽略的插件，需要重启</div><div class="line">    "ignored_packages":</div><div class="line">    [</div><div class="line">        "Vintage"</div><div class="line">    ],</div><div class="line">    // 列显示垂直标尺，在中括号里填入数字，宽度按字符计算</div><div class="line">    "rulers":</div><div class="line">    [</div><div class="line">        80,</div><div class="line">        100</div><div class="line">    ],</div><div class="line">    // 设置为false时，滚动到文本的最下方时，没有缓冲区</div><div class="line">    "scroll_past_end": true,</div><div class="line">    // 在窗口右下角显示打开文件的编码</div><div class="line">    "show_encoding": true,</div><div class="line">    // Tab键制表符宽度</div><div class="line">    "tab_size": 4,</div><div class="line">    // 设为true时，缩进和遇到Tab键时使用空格替代</div><div class="line">    "translate_tabs_to_spaces": false,</div><div class="line">    // 为true时，保存文件时会删除每行结束后多余的空格</div><div class="line">    "trim_trailing_white_space_on_save": false,</div><div class="line">    // 是否自动换行，如果选auto，需要加双引号</div><div class="line">    "word_wrap": false,</div><div class="line">    // 设置窗口内文字区域的宽度</div><div class="line">    "wrap_width": 170</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="用户设定（日文系统）"><a href="#用户设定（日文系统）" class="headerlink" title="用户设定（日文系统）"></a>用户设定（日文系统）</h1><blockquote>
+<p>主要用于代码开发、整形</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    // 设置光标闪动方式</div><div class="line">    "caret_style": "phase",</div><div class="line">    // 主题文件的路径</div><div class="line">    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",</div><div class="line">    // 按space或tab时，实际会产生白色的点（一个空格一个点）或白色的横线（tab_size设置的制表符的宽度）</div><div class="line">    // 要在选中状态下才能看到</div><div class="line">    // 设置为none时，什么情况下都不显示这些点和线</div><div class="line">    // 设置为selection时，只显示选中状态下的点和线</div><div class="line">    // 设置为all时，则一直显示</div><div class="line">    "draw_white_space": "all",</div><div class="line">    // 为true时，保存文件时光标会在文件的最后向下换一行</div><div class="line">    "ensure_newline_at_eof_on_save": true,</div><div class="line">    // 设置字体和大小，必须在Settings-User里重写，这里设置没有任何效果</div><div class="line">    // 因为是日文系统，所以字体我选用的是MyricaM，主页：https://myrica.estable.jp/</div><div class="line">    // 特点：ASCII文字は Inconsolata、それ以外の文字は Mgen+ をベースとしたファイルです。</div><div class="line">    "font_face": "Myrica M",</div><div class="line">    "font_size": 11,</div><div class="line">    // 突出显示当前光标所在的行</div><div class="line">    "highlight_line": true,</div><div class="line">    // 设置文件修改时, 标签高亮提示, 这样可以提示保存</div><div class="line">    "highlight_modified_tabs": true,</div><div class="line">    // 在窗口右下角显示打开文件的编码</div><div class="line">    "show_encoding": true,</div><div class="line">    // 删除你想要忽略的插件，需要重启</div><div class="line">    "ignored_packages":</div><div class="line">    [</div><div class="line">        "Vintage"</div><div class="line">    ],</div><div class="line">    // 列显示垂直标尺，在中括号里填入数字，宽度按字符计算</div><div class="line">    "rulers":</div><div class="line">    [</div><div class="line">        80,</div><div class="line">        100</div><div class="line">    ],</div><div class="line">    // 设为true时，缩进和遇到Tab键时使用空格替代</div><div class="line">    "translate_tabs_to_spaces": true,</div><div class="line">    // 为true时，保存文件时会删除每行结束后多余的空格</div><div class="line">    "trim_trailing_white_space_on_save": true,</div><div class="line">    // 是否自动换行，如果选auto，需要加双引号</div><div class="line">    "word_wrap": "false"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;针对中日文双系统、使用范围不同，分别配置 &lt;code&gt;Sublime Text 3&lt;/code&gt; 的用户设定。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Sublime Text" scheme="http://sunjichao.com/tags/Sublime-Text/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime Text 3 注册码</title>
+    <link href="http://sunjichao.com/201608/sublime-text-3-v3113-license-key/"/>
+    <id>http://sunjichao.com/201608/sublime-text-3-v3113-license-key/</id>
+    <published>2016-08-21T10:33:41.000Z</published>
+    <updated>2016-08-31T13:39:27.244Z</updated>
+    
+    <content type="html"><![CDATA[<p><img title="Sublime Text" alt="Sublime Text" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201608/SublimeText.png"></p>
+
+<p>Sublime Text 3 v3113 版可用注册码<br><a id="more"></a></p>
+<blockquote>
+<p>—– BEGIN LICENSE —–<br>Nicolas Hennion<br>Single User License<br>EA7E-866075<br>8A01AA83 1D668D24 4484AEBC 3B04512C<br>827B0DE5 69E9B07A A39ACCC0 F95F5410<br>729D5639 4C37CECB B2522FB3 8D37FDC1<br>72899363 BBA441AC A5F47F08 6CD3B3FE<br>CEFB3783 B2E1BA96 71AAF7B4 AFB61B1D<br>0CC513E7 52FF2333 9F726D2C CDE53B4A<br>810C0D4F E1F419A3 CDA0832B 8440565A<br>35BF00F6 4CA9F869 ED10E245 469C233E<br>—— END LICENSE ——</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img title=&quot;Sublime Text&quot; alt=&quot;Sublime Text&quot; src=&quot;http://oc8srrbo1.bkt.clouddn.com/blog/images/201608/SublimeText.png&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Sublime Text 3 v3113 版可用注册码&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Sublime Text" scheme="http://sunjichao.com/tags/Sublime-Text/"/>
+    
+      <category term="注册码" scheme="http://sunjichao.com/tags/%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
+    
+      <category term="License Key" scheme="http://sunjichao.com/tags/License-Key/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://sunjichao.com/201608/hello-world/"/>
+    <id>http://sunjichao.com/201608/hello-world/</id>
+    <published>2016-08-20T15:45:30.000Z</published>
+    <updated>2016-08-31T13:10:38.818Z</updated>
+    
+    <content type="html"><![CDATA[<p></p><p><img title="Hello World" alt="Hello World" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201608/hello-world.jpg"></p><br><a id="more"></a><br>欢迎来到<a href="http://sunjichao.com">孙继超</a>的网络日志！<br>今天是2016年8月20日，成功申请了SunJiChao.com这个域名，并尝试开始使用Hexo作为新的博客程序。<br>这是第一篇日志。<p></p>
+<p>软件及版本信息：<br><code>Git for windows:</code> Git-2.9.2-64-bit.exe<br><code>Node.js:</code> node-v4.5.0-x64.msi<br><code>Themes:</code> <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank" rel="external">Paperbox</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;p&gt;&lt;img title=&quot;Hello World&quot; alt=&quot;Hello World&quot; src=&quot;http://oc8srrbo1.bkt.clouddn.com/blog/images/201608/hello-world.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

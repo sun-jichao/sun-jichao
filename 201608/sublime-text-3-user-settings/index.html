@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>Sublime Text 3 用户设置 | 孙继超的网络日志</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="针对中日文双系统、使用范围不同，分别配置 Sublime Text 3 的用户设定。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime Text 3 用户设置">
+<meta property="og:url" content="http://sunjichao.com/201608/sublime-text-3-user-settings/index.html">
+<meta property="og:site_name" content="孙继超的网络日志">
+<meta property="og:description" content="针对中日文双系统、使用范围不同，分别配置 Sublime Text 3 的用户设定。">
+<meta property="og:updated_time" content="2016-08-31T13:10:38.826Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sublime Text 3 用户设置">
+<meta name="twitter:description" content="针对中日文双系统、使用范围不同，分别配置 Sublime Text 3 的用户设定。">
+  
+    <link rel="alternative" href="/atom.xml" title="孙继超的网络日志" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+<script type="text/javascript">
+var isWX = /micromessenger/i.test(navigator.userAgent);
+if (isWX) {
+  document.write('<br/><br/><h1 style="text-align: center;font-size:32px;" >╮(╯_╰)╭</h1><br/><br/><h4 style="text-align: center;" >请在浏览器中打开。</h4><br/><h4 style="text-align: center;" >Please open in the browser.</h4>');
+  window.stop ? window.stop() : document.execCommand("Stop");
+}
+</script>
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <nav id="upper-nav" class="inner">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <div class="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github" class="nav-icon" href="https://github.com/sun-jichao"></a>
+        
+      </div>
+    </nav>
+    <div id="header-title">
+      
+        <h1 id="blog-title-wrap">
+          <a href="/" id="blog-title">孙继超的网络日志</a>
+        </h1>
+      
+    </div>
+    <div id="contenedor">
+      <ul class="cube">
+        <li class="cara">JiChao</li>
+        <li class="cara">程序员</li>
+        <li class="cara">苦逼</li>
+        <li class="cara">Sun</li>
+        <li class="cara">Blog</li>
+        <li class="cara"></li>
+      </ul>
+    </div>
+    <nav id="main-nav">
+      
+        <a class="main-nav-link" href="/">Home</a>
+      
+        <a class="main-nav-link" href="/archives">Archives</a>
+      
+        <a class="main-nav-link" href="/guestbook">GuestBook</a>
+      
+      <a class="main-nav-link st-search-show-outputs">Search</a>
+    </nav>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-sublime-text-3-user-settings" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/201608/sublime-text-3-user-settings/" class="article-date">
+  <time datetime="2016-08-30T18:33:41.000Z" itemprop="datePublished">2016-08-31</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Sublime Text 3 用户设置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <div id="toc" class="toc-article">
+            <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用户设定（中文系统）"><span class="toc-text">用户设定（中文系统）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用户设定（日文系统）"><span class="toc-text">用户设定（日文系统）</span></a></li></ol>
+          </div>
+        
+        <p>针对中日文双系统、使用范围不同，分别配置 <code>Sublime Text 3</code> 的用户设定。<br><a id="more"></a></p>
+<h1 id="用户设定（中文系统）"><a href="#用户设定（中文系统）" class="headerlink" title="用户设定（中文系统）"></a>用户设定（中文系统）</h1><blockquote>
+<p>主要用于文档的编写，和少量的代码开发<br>设定中包含部分系统默认值，重复设定，只是为了添加中文说明，<br>方便以后变更，毕竟默认设定选项太多，而且说明还是英文的。</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    // 设置光标闪动方式</div><div class="line">    "caret_style": "phase",</div><div class="line">    // 主题文件的路径</div><div class="line">    "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",</div><div class="line">    // 如果没有定义过，则文件居中显示（比如新建的文件）</div><div class="line">    "draw_centered": false,</div><div class="line">    // 按space或tab时，实际会产生白色的点（一个空格一个点）或白色的横线（tab_size设置的制表符的宽度）</div><div class="line">    // 要在选中状态下才能看到</div><div class="line">    // 设置为none时，什么情况下都不显示这些点和线</div><div class="line">    // 设置为selection时，只显示选中状态下的点和线</div><div class="line">    // 设置为all时，则一直显示</div><div class="line">    "draw_white_space": "all",</div><div class="line">    // 为true时，保存文件时光标会在文件的最后向下换一行</div><div class="line">    "ensure_newline_at_eof_on_save": true,</div><div class="line">    // 设置字体和大小，必须在Settings-User里重写，这里设置没有任何效果</div><div class="line">    // 之前使用的是雅黑Consolas混合编程字体，但是在代码中不能显示斜体，</div><div class="line">    // 在尝试设定FontLink无法达到满意效果后，果断放弃。</div><div class="line">    "font_face": "Consolas",</div><div class="line">    "font_size": 12,</div><div class="line">    // 是否显示行号边栏</div><div class="line">    "gutter": true,</div><div class="line">    // 突出显示当前光标所在的行</div><div class="line">    "highlight_line": true,</div><div class="line">    // 设置文件修改时, 标签高亮提示, 这样可以提示保存</div><div class="line">    "highlight_modified_tabs": true,</div><div class="line">    // 是否显示行号</div><div class="line">    "line_numbers": true,</div><div class="line">    // 设置每一行到底部，以像素为单位的间距，效果相当于行距</div><div class="line">    "line_padding_bottom": 1,</div><div class="line">    // 设置每一行到顶部，以像素为单位的间距，效果相当于行距</div><div class="line">    "line_padding_top": 1,</div><div class="line">    // 删除你想要忽略的插件，需要重启</div><div class="line">    "ignored_packages":</div><div class="line">    [</div><div class="line">        "Vintage"</div><div class="line">    ],</div><div class="line">    // 列显示垂直标尺，在中括号里填入数字，宽度按字符计算</div><div class="line">    "rulers":</div><div class="line">    [</div><div class="line">        80,</div><div class="line">        100</div><div class="line">    ],</div><div class="line">    // 设置为false时，滚动到文本的最下方时，没有缓冲区</div><div class="line">    "scroll_past_end": true,</div><div class="line">    // 在窗口右下角显示打开文件的编码</div><div class="line">    "show_encoding": true,</div><div class="line">    // Tab键制表符宽度</div><div class="line">    "tab_size": 4,</div><div class="line">    // 设为true时，缩进和遇到Tab键时使用空格替代</div><div class="line">    "translate_tabs_to_spaces": false,</div><div class="line">    // 为true时，保存文件时会删除每行结束后多余的空格</div><div class="line">    "trim_trailing_white_space_on_save": false,</div><div class="line">    // 是否自动换行，如果选auto，需要加双引号</div><div class="line">    "word_wrap": false,</div><div class="line">    // 设置窗口内文字区域的宽度</div><div class="line">    "wrap_width": 170</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="用户设定（日文系统）"><a href="#用户设定（日文系统）" class="headerlink" title="用户设定（日文系统）"></a>用户设定（日文系统）</h1><blockquote>
+<p>主要用于代码开发、整形</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    // 设置光标闪动方式</div><div class="line">    "caret_style": "phase",</div><div class="line">    // 主题文件的路径</div><div class="line">    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",</div><div class="line">    // 按space或tab时，实际会产生白色的点（一个空格一个点）或白色的横线（tab_size设置的制表符的宽度）</div><div class="line">    // 要在选中状态下才能看到</div><div class="line">    // 设置为none时，什么情况下都不显示这些点和线</div><div class="line">    // 设置为selection时，只显示选中状态下的点和线</div><div class="line">    // 设置为all时，则一直显示</div><div class="line">    "draw_white_space": "all",</div><div class="line">    // 为true时，保存文件时光标会在文件的最后向下换一行</div><div class="line">    "ensure_newline_at_eof_on_save": true,</div><div class="line">    // 设置字体和大小，必须在Settings-User里重写，这里设置没有任何效果</div><div class="line">    // 因为是日文系统，所以字体我选用的是MyricaM，主页：https://myrica.estable.jp/</div><div class="line">    // 特点：ASCII文字は Inconsolata、それ以外の文字は Mgen+ をベースとしたファイルです。</div><div class="line">    "font_face": "Myrica M",</div><div class="line">    "font_size": 11,</div><div class="line">    // 突出显示当前光标所在的行</div><div class="line">    "highlight_line": true,</div><div class="line">    // 设置文件修改时, 标签高亮提示, 这样可以提示保存</div><div class="line">    "highlight_modified_tabs": true,</div><div class="line">    // 在窗口右下角显示打开文件的编码</div><div class="line">    "show_encoding": true,</div><div class="line">    // 删除你想要忽略的插件，需要重启</div><div class="line">    "ignored_packages":</div><div class="line">    [</div><div class="line">        "Vintage"</div><div class="line">    ],</div><div class="line">    // 列显示垂直标尺，在中括号里填入数字，宽度按字符计算</div><div class="line">    "rulers":</div><div class="line">    [</div><div class="line">        80,</div><div class="line">        100</div><div class="line">    ],</div><div class="line">    // 设为true时，缩进和遇到Tab键时使用空格替代</div><div class="line">    "translate_tabs_to_spaces": true,</div><div class="line">    // 为true时，保存文件时会删除每行结束后多余的空格</div><div class="line">    "trim_trailing_white_space_on_save": true,</div><div class="line">    // 是否自动换行，如果选auto，需要加双引号</div><div class="line">    "word_wrap": "false"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li></ul>
+
+        <a data-url="http://sunjichao.com/201608/sublime-text-3-user-settings/" data-id="cisiyeec20004aa2hxd5mgtk0" class="article-share-link">分享到</a>
+        
+          <a href="http://sunjichao.com/201608/sublime-text-3-user-settings/#ds-thread" class="article-comment-link">评论</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/201608/sublime-text-3-v3113-license-key/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Sublime Text 3 注册码</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="201608/sublime-text-3-user-settings/" data-title="Sublime Text 3 用户设置" data-url="http://sunjichao.com/201608/sublime-text-3-user-settings/"></div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/201608/sublime-text-3-user-settings/">Sublime Text 3 用户设置</a>
+          </li>
+        
+          <li>
+            <a href="/201608/sublime-text-3-v3113-license-key/">Sublime Text 3 注册码</a>
+          </li>
+        
+          <li>
+            <a href="/201608/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/License-Key/">License Key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/注册码/">注册码</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 孙继超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/guestbook" class="mobile-nav-link">GuestBook</a>
+  
+  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
+</nav>
+  
+
+<!-- totop start -->
+<div id="totop">
+	<a title="返回顶部"></a>
+</div>
+<!-- totop end -->
+
+<!-- swiftype search start -->
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','fGZheSvATsy5qstiZXZ5','2.0.0');
+</script>
+
+<!-- swiftype search end -->
+
+
+<!-- duoshuo start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sunjichao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- duoshuo end -->
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>
