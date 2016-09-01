@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sunjichao.com/"/>
-  <updated>2016-09-01T06:48:44.458Z</updated>
+  <updated>2016-09-01T07:01:20.594Z</updated>
   <id>http://sunjichao.com/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <link href="http://sunjichao.com/201609/sublime-text-3-plugin-add-hexo-front-matter-info/"/>
     <id>http://sunjichao.com/201609/sublime-text-3-plugin-add-hexo-front-matter-info/</id>
     <published>2016-09-01T04:29:00.000Z</published>
-    <updated>2016-09-01T06:48:44.458Z</updated>
+    <updated>2016-09-01T07:01:20.594Z</updated>
     
     <content type="html"><![CDATA[<p>使用 <code>Hexo</code> 作为Blog程序的时候，官方建议使用 <code>hexo new [layout] &lt;title&gt;</code> 的方式创建新文章，之后再编辑创建的md文件。但这样做的前提必须是先打开程序所在目录，再执行创建命令，比较繁琐。<br>本人的使用习惯是直接在 <code>Sublime Text</code> 中直接打开一个新文件，编写完成后，再复制到 <code>_posts</code> 目录中，所以默认情况下是没有 <code>Front-matter</code> 区域的，感觉还是有些不便，于是就有了下面这个 <code>Sublime Text</code> 小插件。</p>
 <a id="more"></a>
-<h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="新建插件"><a href="#新建插件" class="headerlink" title="新建插件"></a>新建插件</h2><p>在 <code>Sublime Text</code> 的菜单中，选择 <code>Tools &gt; Developer &gt; New Plugin</code> (中文环境下是 <code>工具 &gt; 插件开发 &gt; 新建插件</code> )</p>
+<h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="1-新建插件"><a href="#1-新建插件" class="headerlink" title="1. 新建插件"></a>1. 新建插件</h2><p>在 <code>Sublime Text</code> 的菜单中，选择 <code>Tools &gt; Developer &gt; New Plugin</code> (中文环境下是 <code>工具 &gt; 插件开发 &gt; 新建插件</code> )</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sublime, sublime_plugin</div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">AddHexoFrontMatter</span><span class="params">(sublime_plugin.TextCommand)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self, edit)</span>:</span></div><div class="line">        self.view.run_command(<span class="string">"insert_snippet"</span>,</div><div class="line">            &#123;</div><div class="line">                <span class="string">"contents"</span>: <span class="string">"---\n"</span></div><div class="line">                            <span class="string">"title: \n"</span></div><div class="line">                            <span class="string">"date: "</span> + <span class="string">"%s"</span> %datetime.datetime.now().strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>) + <span class="string">"\n"</span></div><div class="line">                            <span class="string">"tags: \n"</span></div><div class="line">                            <span class="string">"toc: true\n"</span></div><div class="line">                            <span class="string">"---\n"</span></div><div class="line">                            <span class="string">"\n\n\n"</span></div><div class="line">                            <span class="string">"&lt;!-- more --&gt;\n"</span></div><div class="line">            &#125;</div><div class="line">        )</div></pre></td></tr></table></figure>
-<h2 id="创建快捷键"><a href="#创建快捷键" class="headerlink" title="创建快捷键"></a>创建快捷键</h2><p>在 <code>Sublime Text</code> 的菜单中，选择 <code>Preferences &gt; Key Bindings - User</code> (中文环境下是 <code>首选项 &gt; 按键邦定 &gt; 用户</code> )</p>
+<h2 id="2-创建快捷键"><a href="#2-创建快捷键" class="headerlink" title="2. 创建快捷键"></a>2. 创建快捷键</h2><p>在 <code>Sublime Text</code> 的菜单中，选择 <code>Preferences &gt; Key Bindings - User</code> (中文环境下是 <code>首选项 &gt; 按键绑定 - 用户</code> )</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">    &#123;</div><div class="line">        <span class="attr">"command"</span>: <span class="string">"add_hexo_front_matter"</span>,</div><div class="line">        <span class="attr">"keys"</span> : [<span class="string">"ctrl+shift+,"</span>]</div><div class="line">    &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
-<h2 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h2><p>此时使用快捷键 <code>ctrl+shift+,</code> 即可在当前光标处插入 <code>Front-matter</code> ，效果如下：</p>
-<img src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201608/sublime-text-3-plugin-add-hexo-front-matter-info.png">
+<h2 id="3-测试效果"><a href="#3-测试效果" class="headerlink" title="3. 测试效果"></a>3. 测试效果</h2><p>此时使用快捷键 <code>ctrl+shift+,</code> 即可在当前光标处插入 <code>Front-matter</code> ，效果如下：</p>
+<img title="Sublime Text 小插件（添加Hexo用Front-matter信息）" alt="执行效果" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201608/sublime-text-3-plugin-add-hexo-front-matter-info.png">
 ]]></content>
     
     <summary type="html">
@@ -42,6 +42,8 @@
       <category term="Sublime Text" scheme="http://sunjichao.com/tags/Sublime-Text/"/>
     
       <category term="Plugin" scheme="http://sunjichao.com/tags/Plugin/"/>
+    
+      <category term="Hexo" scheme="http://sunjichao.com/tags/Hexo/"/>
     
       <category term="Front-matter" scheme="http://sunjichao.com/tags/Front-matter/"/>
     
