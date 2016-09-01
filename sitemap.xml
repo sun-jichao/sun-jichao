@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sunjichao.com/404.html</loc>
+    
+    <lastmod>2016-09-01T13:28:06.238Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sunjichao.com/201609/sublime-text-3-plugin-add-hexo-front-matter-info/</loc>
     
-    <lastmod>2016-09-01T07:01:20.594Z</lastmod>
+    <lastmod>2016-09-01T13:04:42.013Z</lastmod>
     
   </url>
   
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://sunjichao.com/sublimetext/js/macData.json</loc>
+    <loc>http://sunjichao.com/sublimetext/js/sublimetext.js</loc>
     
     <lastmod>2016-08-31T13:10:58.814Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://sunjichao.com/sublimetext/js/sublimetext.js</loc>
+    <loc>http://sunjichao.com/sublimetext/js/macData.json</loc>
     
     <lastmod>2016-08-31T13:10:58.814Z</lastmod>
     
