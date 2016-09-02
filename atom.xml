@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sunjichao.com/"/>
-  <updated>2016-09-02T08:54:05.933Z</updated>
+  <updated>2016-09-02T08:55:48.301Z</updated>
   <id>http://sunjichao.com/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://sunjichao.com/201609/replace-360-cdn-libs-useso-com/"/>
     <id>http://sunjichao.com/201609/replace-360-cdn-libs-useso-com/</id>
     <published>2016-09-02T09:25:46.000Z</published>
-    <updated>2016-09-02T08:54:05.933Z</updated>
+    <updated>2016-09-02T08:55:48.301Z</updated>
     
     <content type="html"><![CDATA[<p>Google字体真是让人又爱又恨的东西，之前被Google被墙，<br>转到了 <a href="http://libs.useso.com/" target="_blank" rel="external">360网站卫士常用前端公共库CDN服务</a>，<br>但是现在360的访问速度越来越慢了，难道是使用的人太多了？不至于吧…<br>没办法，继续找新的吧，于是就发现了<a href="https://css.net/" target="_blank" rel="external">CSS.NET - 常用前端公共库CDN服务</a>，</p>
 <p>速度很快，而且和360的一样，使用的时候，<br>只需要替换 <code>fonts.googleapis.com</code> 为 <code>fonts.css.network</code> 即可。</p>
+<a id="more"></a>
 <p>例如原来的</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"//fonts.googleapis.com/css?family=Source+Code+Pro"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"//fonts.useso.com/css?family=Source+Code+Pro"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -35,7 +36,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;Google字体真是让人又爱又恨的东西，之前被Google被墙，&lt;br&gt;转到了 &lt;a href=&quot;http://libs.useso.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;360网站卫士常用前端公共库CDN服务&lt;/a&gt;，&lt;br&gt;但是现在3
+      &lt;p&gt;Google字体真是让人又爱又恨的东西，之前被Google被墙，&lt;br&gt;转到了 &lt;a href=&quot;http://libs.useso.com/&quot;&gt;360网站卫士常用前端公共库CDN服务&lt;/a&gt;，&lt;br&gt;但是现在360的访问速度越来越慢了，难道是使用的人太多了？不至于吧…&lt;br&gt;没办法，继续找新的吧，于是就发现了&lt;a href=&quot;https://css.net/&quot;&gt;CSS.NET - 常用前端公共库CDN服务&lt;/a&gt;，&lt;/p&gt;
+&lt;p&gt;速度很快，而且和360的一样，使用的时候，&lt;br&gt;只需要替换 &lt;code&gt;fonts.googleapis.com&lt;/code&gt; 为 &lt;code&gt;fonts.css.network&lt;/code&gt; 即可。&lt;/p&gt;
     
     </summary>
     
