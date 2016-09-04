@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>Android Studio 开发环境搭建 | 孙继超的网络日志</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这篇文章主要以图文的方式详细介绍了 Android Studio 搭建Android集成开发环境的过程，适合纯新手。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Studio 开发环境搭建">
+<meta property="og:url" content="http://sunjichao.com/201609/android-studio-development-environment-build-process/index.html">
+<meta property="og:site_name" content="孙继超的网络日志">
+<meta property="og:description" content="这篇文章主要以图文的方式详细介绍了 Android Studio 搭建Android集成开发环境的过程，适合纯新手。">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-01.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-02.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-03.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-04.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-05.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-06.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-07.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-08.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-09.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-10.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-11.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-12.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-1.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-2.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-3.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-4.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-5.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-6.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-7.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-8.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-1.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-2.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-3.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-4.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-5.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-6.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-7.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-8.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-9.png">
+<meta property="og:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-10.png">
+<meta property="og:updated_time" content="2016-09-04T18:44:14.414Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Studio 开发环境搭建">
+<meta name="twitter:description" content="这篇文章主要以图文的方式详细介绍了 Android Studio 搭建Android集成开发环境的过程，适合纯新手。">
+<meta name="twitter:image" content="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-01.png">
+  
+    <link rel="alternative" href="/atom.xml" title="孙继超的网络日志" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link href="//fonts.css.network/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+<script type="text/javascript">
+var isWX = /micromessenger/i.test(navigator.userAgent);
+if (isWX) {
+  document.write('<br/><br/><h1 style="text-align: center;font-size:32px;" >╮(╯_╰)╭</h1><br/><br/><h4 style="text-align: center;" >请在浏览器中打开。</h4><br/><h4 style="text-align: center;" >Please open in the browser.</h4>');
+  window.stop ? window.stop() : document.execCommand("Stop");
+}
+</script>
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <nav id="upper-nav" class="inner">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <div class="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github" class="nav-icon" href="https://github.com/sun-jichao"></a>
+        
+      </div>
+    </nav>
+    <div id="header-title">
+      
+        <h1 id="blog-title-wrap">
+          <a href="/" id="blog-title">孙继超的网络日志</a>
+        </h1>
+      
+    </div>
+    <div id="contenedor">
+      <ul class="cube">
+        <li class="cara">JiChao</li>
+        <li class="cara">程序员</li>
+        <li class="cara">苦逼</li>
+        <li class="cara">Sun</li>
+        <li class="cara">Blog</li>
+        <li class="cara"></li>
+      </ul>
+    </div>
+    <nav id="main-nav">
+      
+        <a class="main-nav-link" href="/">Home</a>
+      
+        <a class="main-nav-link" href="/archives">Archives</a>
+      
+        <a class="main-nav-link" href="/guestbook">GuestBook</a>
+      
+      <a class="main-nav-link st-search-show-outputs">Search</a>
+    </nav>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-android-studio-development-environment-build-process" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/201609/android-studio-development-environment-build-process/" class="article-date">
+  <time datetime="2016-09-04T10:41:24.000Z" itemprop="datePublished">2016-09-04</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Studio 开发环境搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <div id="toc" class="toc-article">
+            <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Android-Studio简单介绍"><span class="toc-text">1. Android Studio简单介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-系统要求"><span class="toc-text">2. 系统要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-前期准备"><span class="toc-text">3. 前期准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-本机开发环境"><span class="toc-text">3.1. 本机开发环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Android-Studio-下载"><span class="toc-text">3.2. Android Studio 下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Java-Development-Kit-JDK-下载"><span class="toc-text">3.3. Java Development Kit (JDK) 下载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-JDK-和-Android-Studio-的安装"><span class="toc-text">4. JDK 和 Android Studio 的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-JDK的安装"><span class="toc-text">4.1. JDK的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-配置Windows上JDK的环境变量"><span class="toc-text">4.2. 配置Windows上JDK的环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-打开-环境变量-画面"><span class="toc-text">4.2.1. 打开 环境变量 画面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-JAVA-HOME-环境变量"><span class="toc-text">4.2.2. JAVA_HOME 环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-3-Path-环境变量"><span class="toc-text">4.2.3. Path 环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-4-测试JDK是否安装成功"><span class="toc-text">4.2.4. 测试JDK是否安装成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Android-Studio-的安装"><span class="toc-text">4.3. Android Studio 的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Android-Studio-的首次运行"><span class="toc-text">4.4. Android Studio 的首次运行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-1-导入旧环境设定"><span class="toc-text">4.4.1. 导入旧环境设定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-2-安装向导的欢迎界面"><span class="toc-text">4.4.2. 安装向导的欢迎界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-3-选择安装类型"><span class="toc-text">4.4.3. 选择安装类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-4-选择-UI主题"><span class="toc-text">4.4.4. 选择 UI主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-5-SDK组件安装"><span class="toc-text">4.4.5. SDK组件安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-6-模拟器的设定"><span class="toc-text">4.4.6. 模拟器的设定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-7-验证设定信息"><span class="toc-text">4.4.7. 验证设定信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-8-下载组件"><span class="toc-text">4.4.8. 下载组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-9-安装向导全部完成"><span class="toc-text">4.4.9. 安装向导全部完成</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-总结"><span class="toc-text">5. 总结</span></a></li></ol>
+          </div>
+        
+        <p>这篇文章主要以图文的方式详细介绍了 <code>Android Studio</code> 搭建Android集成开发环境的过程，适合纯新手。</p>
+<a id="more"></a>
+<h1 id="1-Android-Studio简单介绍"><a href="#1-Android-Studio简单介绍" class="headerlink" title="1. Android Studio简单介绍"></a>1. Android Studio简单介绍</h1><p><code>Android Studio</code> 是基于 IntelliJ IDEA 的官方 Android 应用开发集成开发环境 (IDE)。除了 IntelliJ 强大的代码编辑器和开发者工具，Android Studio 提供了更多可提高 Android 应用构建效率的功能，例如：</p>
+<blockquote>
+<ul>
+<li>基于 Gradle 的灵活构建系统</li>
+<li>快速且功能丰富的模拟器 + 可针对所有 Android 设备进行开发的统一的环境</li>
+<li>Instant Run，可将变更推送到运行中的应用，无需构建新的 APK</li>
+<li>可帮助您构建常用应用功能和导入示例代码的代码模板和 GitHub 集成</li>
+<li>丰富的测试工具和框架</li>
+<li>可捕捉性能、可用性、版本兼容性以及其他问题的 Lint 工具</li>
+<li>C++ 和 NDK 支持</li>
+<li>内置对 Google 云端平台的支持，可轻松集成 Google Cloud Messaging 和 App 引擎</li>
+</ul>
+</blockquote>
+<h1 id="2-系统要求"><a href="#2-系统要求" class="headerlink" title="2. 系统要求"></a>2. 系统要求</h1><blockquote>
+<ul>
+<li>Microsoft® Windows® 7/8/10（32 位或 64 位）</li>
+<li>最低：2GB RAM，推荐：8GB RAM</li>
+<li>最低：2GB 可用磁盘空间，</li>
+<li>推荐：4GB 可用磁盘空间（500MB 用于 IDE + 1.5GB 用于 Android SDK 和模拟器系统映像）</li>
+<li>最低屏幕分辨率：1280 x 800</li>
+<li>对于加速模拟器：64 位操作系统和支持 Intel® VT-x、Intel® EM64T (Intel® 64) 和禁止执行 (XD) &gt; 位功能的 Intel® 处理器</li>
+<li>Java Development Kit (JDK) 8</li>
+</ul>
+</blockquote>
+<h1 id="3-前期准备"><a href="#3-前期准备" class="headerlink" title="3. 前期准备"></a>3. 前期准备</h1><h2 id="3-1-本机开发环境"><a href="#3-1-本机开发环境" class="headerlink" title="3.1. 本机开发环境"></a>3.1. 本机开发环境</h2><blockquote>
+<ul>
+<li>Windows 10 专业版 （64 位）</li>
+</ul>
+</blockquote>
+<h2 id="3-2-Android-Studio-下载"><a href="#3-2-Android-Studio-下载" class="headerlink" title="3.2. Android Studio 下载"></a>3.2. Android Studio 下载</h2><ul>
+<li><a href="https://developer.android.com/studio/index.html" target="_blank" rel="external">Android Studio官方网站地址</a>（可能需要翻墙）</li>
+<li><a href="http://www.android-studio.org/" target="_blank" rel="external">Android Studio 中文社区(官网)</a></li>
+<li><a href="http://pan.baidu.com/s/1bo11Jtl" target="_blank" rel="external">我的百度网盘下载</a> 包含 Android SDK (2.1.3.0)</li>
+</ul>
+<h2 id="3-3-Java-Development-Kit-JDK-下载"><a href="#3-3-Java-Development-Kit-JDK-下载" class="headerlink" title="3.3. Java Development Kit (JDK) 下载"></a>3.3. Java Development Kit (JDK) 下载</h2><ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Oracle官网地址</a></li>
+<li><a href="http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-windows-x64.exe" target="_blank" rel="external">jdk-8u101-windows-x64.exe 官网下载</a><br>此处一定注意自己的操作系统版本啊，因为我的是 <code>64 位</code> 系统，所以下载的是 <code>x64</code> 版的</li>
+<li><a href="http://pan.baidu.com/s/1bo11Jtl" target="_blank" rel="external">我的百度网盘下载</a> jdk-8u101-windows-x64.exe</li>
+</ul>
+<h1 id="4-JDK-和-Android-Studio-的安装"><a href="#4-JDK-和-Android-Studio-的安装" class="headerlink" title="4. JDK 和 Android Studio 的安装"></a>4. JDK 和 Android Studio 的安装</h1><h2 id="4-1-JDK的安装"><a href="#4-1-JDK的安装" class="headerlink" title="4.1. JDK的安装"></a>4.1. JDK的安装</h2><p>JDK的安装过程比较简单，一路默认 <code>下一步</code> 就可以了。</p>
+<img title="JDK的安装 - 01" alt="JDK的安装 - 01" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-01.png">
+<img title="JDK的安装 - 02" alt="JDK的安装 - 02" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-02.png">
+<img title="JDK的安装 - 03" alt="JDK的安装 - 03" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-03.png">
+<img title="JDK的安装 - 04" alt="JDK的安装 - 04" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-04.png">
+<img title="JDK的安装 - 05" alt="JDK的安装 - 05" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-05.png">
+<img title="JDK的安装 - 06" alt="JDK的安装 - 06" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-06.png">
+<h2 id="4-2-配置Windows上JDK的环境变量"><a href="#4-2-配置Windows上JDK的环境变量" class="headerlink" title="4.2. 配置Windows上JDK的环境变量"></a>4.2. 配置Windows上JDK的环境变量</h2><p>为了配置JDK的系统变量环境，我们需要设置两个系统变量，分别是 <code>JAVA_HOME</code> 和 <code>Path</code> 。下面是这两个变量的设置。</p>
+<h3 id="4-2-1-打开-环境变量-画面"><a href="#4-2-1-打开-环境变量-画面" class="headerlink" title="4.2.1. 打开 环境变量 画面"></a>4.2.1. 打开 <code>环境变量</code> 画面</h3><p>点击 <code>控制面板</code> → <code>系统</code> → <code>高级系统设置</code> → <code>高级</code> 下的 → <code>环境变量</code> 按钮，打开 <code>环境变量</code> 画面。</p>
+<img title="JDK的安装 - 07" alt="JDK的安装 - 07" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-07.png">
+<img title="JDK的安装 - 08" alt="JDK的安装 - 08" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-08.png">
+<h3 id="4-2-2-JAVA-HOME-环境变量"><a href="#4-2-2-JAVA-HOME-环境变量" class="headerlink" title="4.2.2. JAVA_HOME 环境变量"></a>4.2.2. JAVA_HOME 环境变量</h3><p>在下面的系统变量列表中查找 <code>JAVA_HOME</code> 变量。如果 <code>JAVA_HOME</code>不存在，点击 <code>新建</code> 来创建，否则，点击 <code>编辑</code>。</p>
+<img title="JDK的安装 - 09" alt="JDK的安装 - 09" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-09.png">
+<img title="JDK的安装 - 10" alt="JDK的安装 - 10" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-10.png">
+<p>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk1.8.0_101</p>
+<h3 id="4-2-3-Path-环境变量"><a href="#4-2-3-Path-环境变量" class="headerlink" title="4.2.3. Path 环境变量"></a>4.2.3. Path 环境变量</h3><p><code>PATH</code> 环境变量已存在，可直接编辑，点击 <code>新建</code> 按钮，输入 <code>%JAVA_HOME%\bin</code> 。<br>然后点击确定，确定，确定，保存这些更改并退出系统属性。</p>
+<img title="JDK的安装 - 11" alt="JDK的安装 - 11" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-11.png">
+<h3 id="4-2-4-测试JDK是否安装成功"><a href="#4-2-4-测试JDK是否安装成功" class="headerlink" title="4.2.4. 测试JDK是否安装成功"></a>4.2.4. 测试JDK是否安装成功</h3><p>为了测试新的JDK安装成功，单击开始按钮，输入cmd，然后回车，打开命令行窗口。在命令行窗口中输入以下命令并按回车：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure>
+<p>如果显示如下信息，那么恭喜您，您已经成功安装了JDK。</p>
+<img title="JDK的安装 - 12" alt="JDK的安装 - 12" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/jdk-step-12.png">
+<h2 id="4-3-Android-Studio-的安装"><a href="#4-3-Android-Studio-的安装" class="headerlink" title="4.3. Android Studio 的安装"></a>4.3. Android Studio 的安装</h2><p>Android Studio 的安装过程也比较简单，一路默认 <code>Next</code> 就可以了。</p>
+<img title="Android Studio 的安装 - 1" alt="Android Studio 的安装 - 1" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-1.png">
+<img title="Android Studio 的安装 - 2" alt="Android Studio 的安装 - 2" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-2.png">
+<img title="Android Studio 的安装 - 3" alt="Android Studio 的安装 - 3" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-3.png">
+<img title="Android Studio 的安装 - 4" alt="Android Studio 的安装 - 4" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-4.png">
+<img title="Android Studio 的安装 - 5" alt="Android Studio 的安装 - 5" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-5.png">
+<img title="Android Studio 的安装 - 6" alt="Android Studio 的安装 - 6" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-6.png">
+<img title="Android Studio 的安装 - 7" alt="Android Studio 的安装 - 7" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-7.png">
+<img title="Android Studio 的安装 - 8" alt="Android Studio 的安装 - 8" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-step-8.png">
+<p>再点一次 <code>Next</code> 就会出现安装完成界面，手快不小心点过去了，就不重新抓图了。</p>
+<p>Android Studio 的安装也就10分钟左右把。</p>
+<h2 id="4-4-Android-Studio-的首次运行"><a href="#4-4-Android-Studio-的首次运行" class="headerlink" title="4.4. Android Studio 的首次运行"></a>4.4. Android Studio 的首次运行</h2><h3 id="4-4-1-导入旧环境设定"><a href="#4-4-1-导入旧环境设定" class="headerlink" title="4.4.1. 导入旧环境设定"></a>4.4.1. 导入旧环境设定</h3><p>第一次启动的时候会有下面的提示，因为是新环境，没有旧设定，我就选择下面这个了。</p>
+<img title="Android Studio 的首次运行 - 1" alt="是否导入旧环境设定" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-1.png">
+<h3 id="4-4-2-安装向导的欢迎界面"><a href="#4-4-2-安装向导的欢迎界面" class="headerlink" title="4.4.2. 安装向导的欢迎界面"></a>4.4.2. 安装向导的欢迎界面</h3><p>之后显示的是 Android Studio 安装向导的欢迎界面，告诉我们可以开发平板、手机、手表、TV、车载和眼睛的相关应用。</p>
+<img title="Android Studio 的首次运行 - 2" alt="欢迎界面" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-2.png">
+<h3 id="4-4-3-选择安装类型"><a href="#4-4-3-选择安装类型" class="headerlink" title="4.4.3. 选择安装类型"></a>4.4.3. 选择安装类型</h3><p>点击 <code>Next</code> 按钮，出现选择 Android Studio 的安装类型画面，两个选项，一个是 Standard（标准），另一个是 Custom（定制），我选择的是Custom（定制）。</p>
+<img title="Android Studio 的首次运行 - 3" alt="选择 Android Studio 的安装类型" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-3.png">
+<h3 id="4-4-4-选择-UI主题"><a href="#4-4-4-选择-UI主题" class="headerlink" title="4.4.4. 选择 UI主题"></a>4.4.4. 选择 UI主题</h3><p>UI主题可以选择目前比较流行的“Darcula”主题，据说这个主题有保护眼睛的功效。</p>
+<img title="Android Studio 的首次运行 - 4" alt="选择 UI主题" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-4.png">
+<h3 id="4-4-5-SDK组件安装"><a href="#4-4-5-SDK组件安装" class="headerlink" title="4.4.5. SDK组件安装"></a>4.4.5. SDK组件安装</h3><p>默认安装吧，最后一个选项 <code>Android Virtual Device</code> 大小是 1G ，因为有可能需要联网下载（翻墙），暂时先不安装了。</p>
+<img title="Android Studio 的首次运行 - 5" alt="SDK组件安装" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-5.png">
+<h3 id="4-4-6-模拟器的设定"><a href="#4-4-6-模拟器的设定" class="headerlink" title="4.4.6. 模拟器的设定"></a>4.4.6. 模拟器的设定</h3><p>我的笔记本内容是 <code>8G</code> 内存，默认是 <code>2G</code> ，正好。默认值继续 <code>Next</code> 。</p>
+<img title="Android Studio 的首次运行 - 6" alt="模拟器的设定" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-6.png">
+<h3 id="4-4-7-验证设定信息"><a href="#4-4-7-验证设定信息" class="headerlink" title="4.4.7. 验证设定信息"></a>4.4.7. 验证设定信息</h3><p>确认无误后，点击 <code>Finish</code> 完成。</p>
+<img title="Android Studio 的首次运行 - 7" alt="验证设定信息" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-7.png">
+<h3 id="4-4-8-下载组件"><a href="#4-4-8-下载组件" class="headerlink" title="4.4.8. 下载组件"></a>4.4.8. 下载组件</h3><img title="Android Studio 的首次运行 - 8" alt="下载安装组件" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-8.png">
+<p>开始下载安装组件，这个是最耗费时间的阶段。</p>
+<h3 id="4-4-9-安装向导全部完成"><a href="#4-4-9-安装向导全部完成" class="headerlink" title="4.4.9. 安装向导全部完成"></a>4.4.9. 安装向导全部完成</h3><img title="Android Studio 的首次运行 - 9" alt="安装向导全部完成" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-9.png">
+<p>最后点击 <code>Finish</code> ，完成安装向导，出现 Android Studio 的欢迎界面。</p>
+<img title="Android Studio 的首次运行 - 10" alt="Android Studio 的欢迎界面" src="http://oc8srrbo1.bkt.clouddn.com/blog/images/201609/android-studio-run-10.png">
+<p>至此 Android Studio 开发环境搭建基本完成。</p>
+<h1 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h1><p>Android Studio 的安装很简单，有教程的情况下很容易就可以安装完成。<br>不过想下载最新版必须要翻墙才可以。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
+
+        <a data-url="http://sunjichao.com/201609/android-studio-development-environment-build-process/" data-id="cisoyz46i0001yn2hnk8jr2qd" class="article-share-link">分享到</a>
+        
+          <a href="http://sunjichao.com/201609/android-studio-development-environment-build-process/#ds-thread" class="article-comment-link">评论</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/201609/replace-360-cdn-libs-useso-com/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">替换360网站卫士常用前端公共库CDN服务</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="201609/android-studio-development-environment-build-process/" data-title="Android Studio 开发环境搭建" data-url="http://sunjichao.com/201609/android-studio-development-environment-build-process/"></div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/201609/android-studio-development-environment-build-process/">Android Studio 开发环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/201609/replace-360-cdn-libs-useso-com/">替换360网站卫士常用前端公共库CDN服务</a>
+          </li>
+        
+          <li>
+            <a href="/201609/sublime-text-3-plugin-add-hexo-front-matter-info/">Sublime Text 小插件（添加Hexo用Front-matter信息）</a>
+          </li>
+        
+          <li>
+            <a href="/201608/sublime-text-3-user-settings/">Sublime Text 3 用户设置</a>
+          </li>
+        
+          <li>
+            <a href="/201608/sublime-text-3-v3113-license-key/">Sublime Text 3 注册码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CDN/">CDN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-NET/">CSS.NET</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Front-matter/">Front-matter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/">Google</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/License-Key/">License Key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Plugin/">Plugin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/USESO/">USESO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端公共库/">前端公共库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/注册码/">注册码</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 孙继超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/guestbook" class="mobile-nav-link">GuestBook</a>
+  
+  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
+</nav>
+  
+
+<!-- totop start -->
+<div id="totop">
+	<a title="返回顶部"></a>
+</div>
+<!-- totop end -->
+
+<!-- swiftype search start -->
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','fGZheSvATsy5qstiZXZ5','2.0.0');
+</script>
+
+<!-- swiftype search end -->
+
+
+<!-- duoshuo start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sunjichao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- duoshuo end -->
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>
