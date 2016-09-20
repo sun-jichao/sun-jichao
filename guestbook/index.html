@@ -47,16 +47,37 @@ if (isWX) {
 
 
   
+  <!-- sunjichao.coding.me -> sunjichao.com start -->
   <script language="javascript">
     host = window.location.host
     if(host == "sunjichao.coding.me")
         window.location.href = window.location.href.replace(/sunjichao.coding.me/,"sunjichao.com")
   </script>
+  <!-- sunjichao.coding.me -> sunjichao.com end -->
+  
+  <!-- http -> https start -->
   <script type="text/javascript">
       var host = "sunjichao.com";
       if ((host == window.location.host) && (window.location.protocol != "https:"))
           window.location.protocol = "https";
   </script>
+  <!-- http -> https end -->
+  
+  <!-- algolia search set start -->
+  <script type="text/javascript" id="hexo.configuration">
+    var CONFIG = {
+      root: '/',
+      algolia: {
+            applicationID: 'RY50II19G2',
+            apiKey: '991b85ace3ef20ac7a085acf43da2d8b',
+            indexName: 'sunjichao',
+            hits: {"per_page":10},
+            labels: {"input_placeholder":"搜索...","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+          }
+    };
+  </script>
+  <!-- algolia search set end -->
+  
 </head>
 
 <body>
@@ -133,7 +154,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="https://sunjichao.com/guestbook/index.html" data-id="citbvecp4000xus2hgat8la66" class="article-share-link">分享到</a>
+        <a data-url="https://sunjichao.com/guestbook/index.html" data-id="citbxmi0q000qxw2hgqhap91k" class="article-share-link">分享到</a>
         
           <a href="https://sunjichao.com/guestbook/index.html#ds-thread" class="article-comment-link">评论</a>
         
@@ -279,7 +300,7 @@ var duoshuoQuery = {short_name:"sunjichao"};
   <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<!-- Baidu Auto Post start -->
+<!-- baidu auto post start -->
 <script>
 (function(){
     var bp = document.createElement('script');
@@ -294,7 +315,7 @@ var duoshuoQuery = {short_name:"sunjichao"};
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-<!-- Baidu Auto Post end -->
+<!-- baidu auto post end -->
 
 <script src="/js/script.js"></script>
 
