@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunjichao.com/404.html</loc>
+    
+    <lastmod>2016-09-20T05:13:54.910Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sunjichao.com/201609/android-studio-development-environment-build-process/</loc>
     
     <lastmod>2016-09-04T18:44:14.414Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://sunjichao.com/201609/replace-360-cdn-libs-useso-com/</loc>
     
     <lastmod>2016-09-02T08:55:48.301Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunjichao.com//404.html</loc>
-    
-    <lastmod>2016-09-01T14:05:12.660Z</lastmod>
     
   </url>
   
@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://sunjichao.com/sublimetext/js/winData.json</loc>
+    <loc>https://sunjichao.com/sublimetext/scss/periodictable.css</loc>
     
     <lastmod>2016-08-31T13:10:59.182Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sunjichao.com/sublimetext/scss/periodictable.css</loc>
+    <loc>https://sunjichao.com/sublimetext/js/winData.json</loc>
     
     <lastmod>2016-08-31T13:10:59.182Z</lastmod>
     
