@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Disallow: /css/
+Disallow: /fancybox/
+Disallow: /js/
+Disallow: /404.html
+Sitemap: https://sunjichao.com/sitemap.xml
