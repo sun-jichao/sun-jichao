@@ -503,7 +503,7 @@ pre,
 }
 pre,
 code {
-  font-family: "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+  font-family: "Source Code Pro", "PT Mono", Consolas, Monaco, Menlo, monospace;
 }
 code {
   padding: 2px 4px;
@@ -1576,7 +1576,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f91aff;
+  background: #ff4eaf;
 }
 .links-of-blogroll {
   font-size: 13px;
