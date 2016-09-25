@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunjichao.com/guestbook/index.html</loc>
+    
+    <lastmod>2016-09-25T12:43:15.092Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sunjichao.com/tags/index.html</loc>
     
     <lastmod>2016-09-25T11:19:48.435Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://sunjichao.com/sublimetext/scss/periodictable.css</loc>
+    <loc>https://sunjichao.com/sublimetext/js/winData.json</loc>
     
     <lastmod>2016-08-31T13:10:59.182Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sunjichao.com/sublimetext/js/winData.json</loc>
+    <loc>https://sunjichao.com/sublimetext/scss/periodictable.css</loc>
     
     <lastmod>2016-08-31T13:10:59.182Z</lastmod>
     
@@ -96,13 +103,6 @@
     <loc>https://sunjichao.com/sublimetext/css/bootstrap/bootstrap.min.css</loc>
     
     <lastmod>2016-08-31T13:10:58.470Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunjichao.com/guestbook/index.html</loc>
-    
-    <lastmod>2016-08-31T13:10:47.846Z</lastmod>
     
   </url>
   
