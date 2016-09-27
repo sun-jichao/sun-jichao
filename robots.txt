@@ -5,4 +5,5 @@ Disallow: /css/
 Disallow: /fancybox/
 Disallow: /js/
 Disallow: /404.html
+Disallow: /sublimetext/
 Sitemap: https://sunjichao.com/sitemap.xml
