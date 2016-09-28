@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunjichao.com/"/>
-  <updated>2016-09-04T18:44:14.414Z</updated>
+  <updated>2016-09-28T05:59:59.372Z</updated>
   <id>https://sunjichao.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>显示MS SQL Server视图的MS_Description信息</title>
+    <link href="https://sunjichao.com/201609/displays-the-ms-description-information-for-the-ms-sql-server-view/"/>
+    <id>https://sunjichao.com/201609/displays-the-ms-description-information-for-the-ms-sql-server-view/</id>
+    <published>2016-09-28T05:44:23.000Z</published>
+    <updated>2016-09-28T05:59:59.372Z</updated>
+    
+    <content type="html"><![CDATA[<p>现在手头的项目资料中，有表 <code>Table</code> 的物理名和逻辑名的文档，但没有视图 <code>View</code> 的物理名和逻辑名的文档，开发的时候很不方便，于是便有了下面两段小SQL文。</p>
+<a id="more"></a>
+<p>视图一览</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> obj.name  <span class="keyword">AS</span> [视图物理名]</div><div class="line">      ,pro.value <span class="keyword">AS</span> [视图逻辑名]</div><div class="line">  <span class="keyword">FROM</span> sys.objects obj</div><div class="line"> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> sys.extended_properties pro</div><div class="line">    <span class="keyword">ON</span> obj.object_id = pro.major_id</div><div class="line">   <span class="keyword">AND</span> pro.minor_id  = <span class="number">0</span></div><div class="line">   <span class="keyword">AND</span> pro.name      = <span class="string">'MS_Description'</span></div><div class="line"> <span class="keyword">WHERE</span> obj.type      = <span class="string">'V'</span></div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> obj.name</div></pre></td></tr></table></figure>
+<p>项目名一览</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> obj.name     <span class="keyword">AS</span> [视图物理名]</div><div class="line">      ,proTbl.value <span class="keyword">AS</span> [视图逻辑名]</div><div class="line">      ,col.name     <span class="keyword">AS</span> [字段物理名]</div><div class="line">      ,proCol.value <span class="keyword">AS</span> [字段逻辑名]</div><div class="line">  <span class="keyword">FROM</span> sys.columns <span class="keyword">col</span></div><div class="line">      ,sys.extended_properties proCol</div><div class="line">      ,sys.extended_properties proTbl</div><div class="line">      ,sys.objects obj</div><div class="line"> <span class="keyword">WHERE</span> col.object_id = proCol.major_id</div><div class="line">   <span class="keyword">AND</span> col.column_id = proCol.minor_id</div><div class="line">   <span class="keyword">AND</span> obj.object_id = proTbl.major_id</div><div class="line">   <span class="keyword">AND</span> obj.object_id = col.object_id</div><div class="line">   <span class="keyword">AND</span> obj.type = <span class="string">'V'</span></div><div class="line">   <span class="keyword">AND</span> proTbl.minor_id = <span class="number">0</span></div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> obj.name</div></pre></td></tr></table></figure>
+<p>当然，前提条件是视图在创建的时候，已经包含了说明信息，例如下面的代码：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">EXEC sys.sp_addextendedproperty</div><div class="line">         @name=N'MS_Description'</div><div class="line">        ,@value=N'姓名'</div><div class="line">        ,@level0type=N'SCHEMA'</div><div class="line">        ,@level0name=N'dbo'</div><div class="line">        ,@level1type=N'TABLE'</div><div class="line">        ,@level1name=N'T_MstUser'</div><div class="line">        ,@level2type=N'COLUMN'</div><div class="line">        ,@level2name=N'Name'</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在手头的项目资料中，有表 &lt;code&gt;Table&lt;/code&gt; 的物理名和逻辑名的文档，但没有视图 &lt;code&gt;View&lt;/code&gt; 的物理名和逻辑名的文档，开发的时候很不方便，于是便有了下面两段小SQL文。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SQL Server" scheme="https://sunjichao.com/tags/SQL-Server/"/>
+    
+      <category term="MS_Description" scheme="https://sunjichao.com/tags/MS-Description/"/>
+    
+  </entry>
   
   <entry>
     <title>Android Studio 开发环境搭建</title>
