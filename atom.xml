@@ -299,15 +299,15 @@
     <link href="https://sunjichao.com/201608/hello-world/"/>
     <id>https://sunjichao.com/201608/hello-world/</id>
     <published>2016-08-20T15:45:30.000Z</published>
-    <updated>2016-09-25T15:55:26.400Z</updated>
+    <updated>2016-10-08T03:41:39.283Z</updated>
     
-    <content type="html"><![CDATA[<p></p><p><img title="Hello World" alt="Hello World" src="https://odqwjjp9p.qnssl.com/blog/images/201608/hello-world.jpg"></p><br><a id="more"></a><br>欢迎来到<a href="https://sunjichao.com">孙继超</a>的网络日志！<br>今天是2016年8月20日，成功申请了SunJiChao.com这个域名，并尝试开始使用Hexo作为新的博客程序。<br>这是第一篇日志。<p></p>
+    <content type="html"><![CDATA[<p></p><p><img title="Hello World" alt="Hello World" class="full-image" src="https://odqwjjp9p.qnssl.com/blog/images/201608/hello-world.jpg"></p><br><a id="more"></a><br>欢迎来到<a href="https://sunjichao.com">孙继超</a>的网络日志！<br>今天是2016年8月20日，成功申请了SunJiChao.com这个域名，并尝试开始使用Hexo作为新的博客程序。<br>这是第一篇日志。<p></p>
 <p>软件及版本信息：<br><code>Git for windows:</code> Git-2.9.2-64-bit.exe<br><code>Node.js:</code> node-v4.5.0-x64.msi<br><code>Themes:</code> <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank" rel="external">Paperbox</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;p&gt;&lt;img title=&quot;Hello World&quot; alt=&quot;Hello World&quot; src=&quot;https://odqwjjp9p.qnssl.com/blog/images/201608/hello-world.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;
+      &lt;p&gt;&lt;p&gt;&lt;img title=&quot;Hello World&quot; alt=&quot;Hello World&quot; class=&quot;full-image&quot; src=&quot;https://odqwjjp9p.qnssl.com/blog/images/201608/hello-world.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;
     
     </summary>
     
